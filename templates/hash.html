@@ -1,16 +1,21 @@
 <!DOCTYPE html>
+{% extends 'base.html' %}
 <html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
+<body>
+{% block body %}
 <br>
-<h1>hash = {{ hash }}</h1>
+<h1>hash = {{ hash.upper() }}</h1>
 <br>
 [
 {% for i in params %}
 {{i}};
 {%endfor%}
 ]
+{% endblock %}
+
 </body>
 </html>
